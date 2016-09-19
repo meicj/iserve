@@ -19,13 +19,13 @@ iserve
 
 # Options
 
-all the options.
+All the options.
 ```
 iserve -h
 ```
 
 | Options | Description | Planing |
-| --- | --- |
+| --- | --- | --- |
 | -s, --serverlog | enable server log | done |
 | -c, --console | open two-way-console-tool | planing |
 | -r, --livereload | enable live reload | planing |
