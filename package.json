@@ -1,0 +1,33 @@
+{
+  "name": "iserve",
+  "version": "0.0.1",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meicj/iserve.git"
+  },
+  "main": "index.js",
+  "bin": {
+    "iserve": "./bin/iserve"
+  },
+  "scripts": {
+    "start": "babel-node index.js",
+    "build": "babel src --out-dir des",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "meicj",
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.10.4",
+    "babel-plugin-transform-es2015-destructuring": "^6.9.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.10.3",
+    "babel-plugin-transform-es2015-parameters": "^6.9.0",
+    "babel-plugin-transform-es2015-spread": "^6.8.0",
+    "babel-plugin-transform-strict-mode": "^6.8.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "yargs": "^4.7.1"
+  }
+}

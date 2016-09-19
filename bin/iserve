@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+
+process.title = 'iServe';
+require('../des/cli.js').default();
