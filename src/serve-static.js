@@ -1,13 +1,12 @@
 import express from 'express';
+import iserve from './iserve';
 
-const staticServe = express.Router();
+const staticServe = new express.Router();
 
-const options = {
-    lastModified: false,
-    maxAge: 0
-};
-
-export default (argv)=> {
-    staticServe.use(express.static(argv.workingdir, options));
-    return staticServe;
+export default (argv) => {
+  staticServe.use(express.static(
+    argv.workingdir,
+    iserve.staticServeOptions
+  ));
+  return staticServe;
 };

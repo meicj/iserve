@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 exports.event = exports.util = undefined;
 
@@ -17,20 +17,26 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const emitter = new _events2.default();
 
+const staticServeOptions = {
+  lastModified: false,
+  maxAge: 0
+};
+
 const iserve = {
-    argv: null,
-    setArgv(v) {
-        this.argv = v;
-    }
+  argv: null,
+  setArgv(v) {
+    this.argv = v;
+  },
+  staticServeOptions
 };
 
 const event = {
-    emitServeStatic() {
-        emitter.emit('serve-static:start', iserve.argv);
-    },
-    bindServeStatic(func) {
-        emitter.on('serve-static:start', func);
-    }
+  emitServeStatic() {
+    emitter.emit('serve-static:start', iserve.argv);
+  },
+  bindServeStatic(func) {
+    emitter.on('serve-static:start', func);
+  }
 };
 
 exports.default = iserve;
